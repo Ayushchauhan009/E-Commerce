@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Navbar css */
+
+.navbar-link {
+  display: inline-block;
+  padding: 0.1rem;
+  text-decoration: none;
+  color: #333;
+}
+
+.navbar-link:hover {
+  position: relative;
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
+.navbar-link:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  transform: translateX(80%);
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+}
+.navbar-contact {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+}
+
+.active-link {
+  /* Add your gradient styles */
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  /* Add your underline styles */
+  text-decoration: underline;
+}
+
+
+.navbar-contact:hover {
+  position: relative;
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  transition: linear 3s ease-in;
+}
+
+.navbar-contact:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0; 
+  transform: translateX(80%);
+  width: 40%;
+  height: 2px;
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+}
+
+/* AboutUs-summary CSS */
+
+.req-bg{
+  background-image: url("./assets/images/reqImg.png");
+}
+
+.wrapper{
+  height: fit-content;
+  background: linear-gradient(to right, rgba(56, 88, 255, 0.2), rgba(183, 69, 255, 0.2), rgba(217, 64, 255, 0.2));
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+  justify-content: center;
+  /* border: 1px solid red; */
+  flex-direction: column;
+}
+
+.marquee{
+  display: flex;
+  width: 1100px;
+  overflow: hidden;
+  user-select: none ;
+}
+
+@media (max-width: 768px){
+
+
+  .marquee{
+    width: 200%;
+    margin-right: 100%;
+  }
+  
+  .marqueeGroup {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: none; 
+  }
+
+ 
+  .imageGroup1 {
+    width: 150%; 
+    padding: 10px; 
+  }
+
+
+  .imageGroup2 {
+    width: 100%; 
+    padding: 10px; 
+  }
+
+  .imaGe {
+    aspect-ratio: 1/1;
+    height: 100px;
+  }
+  .imaGe2 {
+    aspect-ratio: unset; 
+    height: auto; 
+  }
+  
+}
+
+
+.marqueeGroup{
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  justify-content: space-around;
+  animation: scrollX 20s linear infinite;
+
+}
+.marqueeGroup3{
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  white-space: nowrap;
+  width: 100%;
+  /* margin: 0 20px; */
+  justify-content: space-around;
+  animation: scrollX 25s linear infinite;
+
+}
+
+.imageGroup1{
+  display: grid;
+  place-items: center;
+  width: clamp(10rem, 1rem + 60vmin, 30rem);
+  padding: calc(clamp(10rem, 1rem + 36vmin, 30rem) / 12);
+}
+
+.imageGroup2{
+  display: grid;
+  place-items: center;
+  width: 10rem;
+  padding: calc(clamp(10rem, 0rem + 16vmin, 30rem) / 10 );
+}
+.imageGroup3{
+  display: flex;
+  
+  width: 40rem;
+  margin: 0 12px;
+  place-items: center;
+  /* padding: calc(clamp(10rem, 0rem + 36vmin, 30rem) / 60); */
+}
+
+.imaGe{
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  aspect-ratio: 16/9;
+}
+.imaGe3{
+  object-fit: contain;
+  width: 150%;
+  /* margin: 0 30%; */
+  height: 200%;
+  border-radius: 0.5rem;
+  aspect-ratio: 4/4;
+}
+.imaGe2{
+  object-fit: cover;
+  width: 150%;
+  height: 150%;
+  border-radius: 0.4rem;
+  aspect-ratio: 16/8;
+}
+
+.multiverse-text{
+  background: linear-gradient(268.81deg, #3858FF 28.07%, #B745FF 74.52%, #D940FF 101.17%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+
+}
+
+@keyframes scrollX {
+  from {
+    left: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+  
+}
+
+
+.wrap{
+  background: linear-gradient(to right, rgba(56, 88, 255, 0.2), rgba(183, 69, 255, 0.2), rgba(217, 64, 255, 0.2));
+}

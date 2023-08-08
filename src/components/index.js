@@ -1,0 +1,12 @@
+export { default as Navbar } from "./Navbar";
+export { default as Header } from "./Header";
+export { default as Request } from "./Request";
+export { default as Partners } from "./Partners";
+export { default as ImageScroller } from "./ImageScroller";
+export { default as Approach } from "./Approach";
+export { default as Footer } from "./Footer";
+export { default as Sellers } from "./Sellers";
+export { default as CaseStudies } from "./CaseStudies";
+export { default as Technologies } from "./Technologies";
+export { default as Testimonials } from "./Testimonials";
+export { default as Contact } from "./Contact";
