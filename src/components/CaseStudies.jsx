@@ -8,11 +8,17 @@ const CaseStudies = () => {
   const [isFormOpen2, setIsFormOpen2] = useState(false);
 
   const handleRequestClick = () => {
-    setIsFormOpen(true);
+    setIsFormOpen1(true);
+  };
+  const handleRequestClick2 = () => {
+    setIsFormOpen2(true);
   };
 
   const handleCancelClick = () => {
-    setIsFormOpen(false);
+    setIsFormOpen1(false);
+  };
+  const handleCancelClick2 = () => {
+    setIsFormOpen2(false);
   };
   return (
     <div className="font-nunito px-6 lg:px-28">
@@ -34,11 +40,11 @@ const CaseStudies = () => {
               </h2>
             </div>
           </button>
-          {isFormOpen && <Duvon onCancel={handleCancelClick} />}
+          {isFormOpen1 && <Duvon onCancel={handleCancelClick} />}
         </div>
 
         <div>
-          <button onClick={handleRequestClick}>
+          <button onClick={handleRequestClick2}>
             <div className="my-4 md:my-0 mx-0 md:mx-8">
               <img src={relate8} alt="" />
               <div className="flex font-bold my-2 multiverse-text text-[10px] lg:text-[13px]">
@@ -51,7 +57,7 @@ const CaseStudies = () => {
               </h2>
             </div>
           </button>
-          {isFormOpen && <Kalon onCancel={handleCancelClick} />}
+          {isFormOpen2 && <Kalon onCancel={handleCancelClick2} />}
         </div>
       </div>
     </div>
