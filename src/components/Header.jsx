@@ -19,14 +19,14 @@ const Header = () => {
           <h1 className="text-2xl md:text-4xl w-auto  font-semibold">
             E-Commerce Management
           </h1>
-          <p className="font-bold multiverse-text text-lg md:text-2xl w-auto  mt-3">
+          <p className="font-bold multiverse-text text-lg md:text-2xl w-auto  lg:mt-3">
             Accelerating your online store's growth with our ecommerce expertise
           </p>
 
           <div className="flex items-center flex-col lg:flex-row">
             <img src={image1} alt="" className="w-auto my-10" />
-            <div className="pl-6 pr-6 py-7 shadow-2xl">
-              <h1 className="font-semibold text-[22px]">
+            <div className="lg:pl-6 lg:pr-6 lg:py-7 lg:shadow-2xl">
+              <h1 className="font-semibold text-[20px] lg:text-[22px]">
                 Ready To Grow Your Business
               </h1>
               <p className="text-[14px] text-[#696969]">

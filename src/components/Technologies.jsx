@@ -26,7 +26,7 @@ const images = [
 function Technologies() {
   return (
     <div className="wrapper">
-      <div className="flex flex-col lg:flex-row px-6 lg:px-28 lg:items-center font-nunito">
+      <div className="flex flex-col lg:flex-row px-4 lg:px-28 lg:items-center font-nunito">
         <h2 className="text-[20px] lg:text-[35px] font-semibold my-10">
           Say Yes To Technology With Mèlange!
         </h2>

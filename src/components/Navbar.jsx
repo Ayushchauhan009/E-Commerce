@@ -145,7 +145,7 @@ const Navbar = () => {
                 // to="/services"
                 activeClassName="active-link"
                 exact
-                className="nav-link text-[25px] my-8 "
+                className="nav-link text-[25px] py-4 "
               >
                 Solutions
               </div>

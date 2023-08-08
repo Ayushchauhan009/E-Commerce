@@ -49,9 +49,9 @@ const Kalon = ({ onCancel }) => {
   // }, []);
   return (
     <div>
-      <div className="pt-28 bg-white top-[-15%]  md:pt-32 inset-0 font-nunito pb-14 fixed z-30 overflow-y-scroll transition-scrolling">
+      <div className="pt-40 bg-white top-[-15%]  md:pt-32 inset-0 font-nunito pb-14 fixed z-30 overflow-y-scroll transition-scrolling">
         <button
-          className=" text-white ml-[92%] py-1 rounded-full font-bold mx-14"
+          className=" text-white ml-[78%] lg:ml-[92%] py-1 rounded-full font-bold mx-14"
           type="button"
           onClick={onCancel}
         >

@@ -13,12 +13,12 @@ const Request = () => {
   };
 
   return (
-    <div className="px-6 md:px-16 lg:px-28 my-20 font-nunito req-bg h-64 flex flex-col justify-evenly items-center">
+    <div className="px-6 md:px-16 lg:px-28 my-20 font-nunito req-bg h-64 flex flex-col justify-center lg:justify-evenly items-center">
       <h2 className="text-[22px] lg:text-[35px] text-white font-semibold text-center">
         Ready to scale your e-commerce sales to the next level?
       </h2>
       <button
-        className="bg-purple-500 p-3 font-semibold text-[16px] lg:text-[20px] text-white hover:shadow-2xl hover:scale-110 transition-all rounded-full"
+        className="bg-purple-500 p-3 font-semibold mt-3 lg:mt-0 text-[16px] lg:text-[20px] text-white hover:shadow-2xl hover:scale-110 transition-all rounded-full"
         onClick={handleRequestClick}
       >
         Request an E-commerce Strategy
