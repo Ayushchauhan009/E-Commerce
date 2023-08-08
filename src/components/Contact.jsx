@@ -3,7 +3,7 @@ import { message, phone } from "../assets/images";
 
 const Contact = () => {
   return (
-    <div className="py-24 my-24 wrap md:py-32 px-6 md:px-16 lg:px-28 lg:py-24  sm:py-16 flex flex-col md:flex-row justify-between items-center font-nunito">
+    <div className="py-24 my-24 wrap md:py-32 px-6 md:px-16 lg:px-28 lg:py-8  sm:py-16 flex flex-col md:flex-row justify-between items-center font-nunito">
       <div className="md:w-1/2 lg:w-1/2 xl:w-1/2 mb-8 md:mb-0">
         <h1 className="text-2xl md:text-3xl lg:text-[35px] font-semibold w-auto ">
           Let's connect <br /> to build something <br /> memorable for your{" "}
@@ -27,9 +27,6 @@ const Contact = () => {
             </span>
           </p>
         </div>
-        {/* <div className="mt-6">
-          <MapButton />
-        </div> */}
       </div>
       <div className="md:w-1/2 bg-white lg:w-1/2 xl:w-[40%]">
         <div className="pl-6 pr-6 py-7 shadow-2xl">

@@ -14,41 +14,42 @@ const Partners = () => {
       <h1 className="font-semibold text-[22px] lg:text-[30px] mb-6">
         Your End-to-End E-commerce Growth Partner
       </h1>
-      <div className="grid grid-cols-1  lg:grid-cols-3">
-        <div className="bg-white gap-10 border shadow-xl rounded-[12px] p-6 m-6 flex flex-col items-center jutify-evenly">
+      <div className="grid grid-cols-2  lg:grid-cols-3">
+        <div className="bg-white gap-14 border shadow-xl rounded-[12px] p-6 m-2 flex flex-col items-center jutify-evenly">
           <img src={scout1} alt="" />
           <p className="font-semibold text-center text-[20px]">
-            Setting Up Seller Central Account
+            Setting Up Seller Central <br /> Account
           </p>
         </div>
-        <div className="bg-white gap-10 border shadow-xl rounded-[12px] p-6 m-6 flex flex-col items-center jutify-evenly">
+        <div className="bg-white gap-14 border shadow-xl rounded-[12px] p-6 m-2 flex flex-col items-center jutify-evenly">
           <img src={scout2} alt="" />
           <p className="font-semibold text-center text-[20px]">
-            E-commerce Prep and Logistics
+            E-commerce Prep and <br /> Logistics
           </p>
         </div>
-        <div className="bg-white gap-10 border shadow-xl rounded-[12px] p-6 m-6 flex flex-col items-center jutify-evenly">
+        <div className="bg-white gap-14 border shadow-xl rounded-[12px] p-6 m-2 flex flex-col items-center jutify-evenly">
           <img src={scout3} alt="" />
           <p className="font-semibold text-center text-[20px]">
-            E-commerce Product Listing
+            E-commerce Product <br /> Listing
           </p>
         </div>
-        <div className="bg-white gap-10 border shadow-xl rounded-[12px] p-6 m-6 flex flex-col items-center jutify-evenly">
+        <div className="bg-white gap-14 border shadow-xl rounded-[12px] p-6 m-2 flex flex-col items-center jutify-evenly">
           <img src={scout4} alt="" />
-          <p className="font-semibold text-center w-[50%] text-[20px]">
-            E-commerce Ads
+          <p className="font-semibold text-center  text-[20px]">
+            E-commerce <br />
+            Ads
           </p>
         </div>
-        <div className="bg-white gap-10 border shadow-xl rounded-[12px] p-6 m-6 flex flex-col items-center jutify-evenly">
+        <div className="bg-white gap-14 border shadow-xl rounded-[12px] p-6 m-2 flex flex-col items-center jutify-evenly">
           <img src={scout5} alt="" />
-          <p className="font-semibold text-center w-[70%] text-[20px]">
-            Brand Registry and Protection
+          <p className="font-semibold text-center  text-[20px]">
+            Brand Registry and <br /> Protection
           </p>
         </div>
-        <div className="bg-white gap-10 border shadow-xl rounded-[12px] p-6 m-6 flex flex-col items-center jutify-evenly">
+        <div className="bg-white gap-14 border shadow-xl rounded-[12px] p-6 m-2 flex flex-col items-center jutify-evenly">
           <img src={scout6} alt="" />
-          <p className="font-semibold text-center w-[70%] text-[20px]">
-            E-commerce SEO content
+          <p className="font-semibold text-center  text-[20px]">
+            E-commerce SEO <br /> content
           </p>
         </div>
       </div>

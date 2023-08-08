@@ -4,7 +4,8 @@ import Duvon from "./Duvon";
 import Kalon from "./Kalon";
 
 const CaseStudies = () => {
-  const [isFormOpen, setIsFormOpen] = useState(false);
+  const [isFormOpen1, setIsFormOpen1] = useState(false);
+  const [isFormOpen2, setIsFormOpen2] = useState(false);
 
   const handleRequestClick = () => {
     setIsFormOpen(true);
@@ -15,7 +16,7 @@ const CaseStudies = () => {
   };
   return (
     <div className="font-nunito px-6 lg:px-28">
-      <h2 className="mt-20 text-2xl md:text-3xl font-bold multiverse-text">
+      <h2 className="mt-20 text-2xl md:text-3xl font-bold">
         E-commerce Management Case Studies
       </h2>
       <div className="flex flex-col md:flex-row mt-10 pb-10">

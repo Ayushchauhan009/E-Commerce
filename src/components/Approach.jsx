@@ -3,7 +3,7 @@ import React from "react";
 const Approach = () => {
   return (
     <div className=" px-6 md:px-16 pb-10 lg:px-28 font-nunito">
-      <h2 className="mt-20 text-3xl font-bold multiverse-text">Our Approach</h2>
+      <h2 className="mt-20 text-3xl font-bold">Our Approach</h2>
       <div className="my-10 w-full h-0.5 bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600"></div>
       <div className="flex flex-col md:flex-row justify-start">
         <p className="font-bold text-lg md:text-xl">01</p>
@@ -41,9 +41,8 @@ const Approach = () => {
         <div className="w-full lg:w-[50%]">
           <p className="text-base md:text-lg">
             Using preferences and buying behavior data, we tailor the online
-            shopping journey. Our focus: personalized product recommendations,
-            pricing, content, and consistent experiences across channels and
-            devices.
+            shopping journey by personalizing product recommendations, pricing,
+            content, and consistent experiences across channels and devices.
           </p>
         </div>
       </div>
@@ -55,10 +54,10 @@ const Approach = () => {
         </h2>
         <div className="w-full lg:w-[50%]">
           <p className="text-base md:text-lg">
-            As your e commerce agency, we continuously analyze your e-commerce
-            business, examining sales, conversion rates, customer satisfaction,
-            and trends. With these insights, we adapt marketing strategies,
-            ensuring a competitive edge in an ever-evolving landscape.
+            As your e-commerce agency, we analyze your business data to enhance
+            sales, conversions, satisfaction, and trends. This informs adaptable
+            marketing strategies, providing a competitive edge in a dynamic
+            landscape.
           </p>
         </div>
       </div>

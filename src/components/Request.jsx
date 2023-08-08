@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cancel, reqImg } from "../assets/images";
+import { cancel } from "../assets/images";
 
 const Request = () => {
   const [isFormOpen, setIsFormOpen] = useState(false);
