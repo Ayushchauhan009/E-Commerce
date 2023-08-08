@@ -46,8 +46,18 @@ import duvon6 from "./duvon6.png";
 import kalonBanner from "./kalonBanner.png";
 import kalon1 from "./kalon1.png";
 import kalon2 from "./kalon2.png";
+import relate6 from "./relate6.png";
+import activeClubVideo from "./ActiveClubPromoVideo.mp4";
+import active1 from "./active1.png";
+import active2 from "./active2.png";
+import active3 from "./active3.png";
 
 export {
+  active1,
+  active2,
+  active3,
+  activeClubVideo,
+  relate6,
   kalon1,
   kalon2,
   kalonBanner,

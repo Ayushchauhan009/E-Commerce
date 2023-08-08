@@ -27,10 +27,10 @@ function Technologies() {
   return (
     <div className="wrapper">
       <div className="flex flex-col lg:flex-row px-6 lg:px-28 lg:items-center font-nunito">
-        <h2 className="text-[24px] lg:text-[35px] font-semibold my-10">
+        <h2 className="text-[20px] lg:text-[35px] font-semibold my-10">
           Say Yes To Technology With Mèlange!
         </h2>
-        <p className="w-auto lg:w-[60%]">
+        <p className="w-auto lg:w-[60%] hidden lg:block">
           We utilize technology as a powerful tool to deliver customer-centric
           experiences, combining it with a data-driven approach, while
           constantly staying updated with the latest trends.

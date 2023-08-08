@@ -91,7 +91,7 @@ const Testimonials = () => {
           {getPageReviews().map((review) => (
             <div
               key={review.id}
-              className="review md:mx-4 my-6 px-4 py-8 w-full testimonial rounded-lg shadow-xl sm:w-1/2 md:w-1/2 lg:w-56 xl:w-[34rem]"
+              className="review md:mx-4 my-6 px-4 py-8 w-full testimonial rounded-lg shadow-xl sm:w-1/2 md:w-1/2 lg:w-56 xl:w-[34rem] 2xl:w-[40rem]"
             >
               <div className="float-right ">
                 <img src={review.comma} alt="" className="w-10 h-8" />

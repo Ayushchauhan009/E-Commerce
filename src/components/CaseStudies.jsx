@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-import { relate5, relate8 } from "../assets/images";
+import { relate5, relate6, relate8 } from "../assets/images";
 import Duvon from "./Duvon";
 import Kalon from "./Kalon";
+import ActiveClub from "./ActiveClub";
 
 const CaseStudies = () => {
   const [isFormOpen1, setIsFormOpen1] = useState(false);
   const [isFormOpen2, setIsFormOpen2] = useState(false);
+  const [isFormOpen3, setIsFormOpen3] = useState(false);
 
   const handleRequestClick = () => {
     setIsFormOpen1(true);
@@ -13,12 +15,18 @@ const CaseStudies = () => {
   const handleRequestClick2 = () => {
     setIsFormOpen2(true);
   };
+  const handleRequestClick3 = () => {
+    setIsFormOpen3(true);
+  };
 
   const handleCancelClick = () => {
     setIsFormOpen1(false);
   };
   const handleCancelClick2 = () => {
     setIsFormOpen2(false);
+  };
+  const handleCancelClick3 = () => {
+    setIsFormOpen3(false);
   };
   return (
     <div className="font-nunito px-6 lg:px-28">
@@ -58,6 +66,22 @@ const CaseStudies = () => {
             </div>
           </button>
           {isFormOpen2 && <Kalon onCancel={handleCancelClick2} />}
+        </div>
+        <div>
+          <button onClick={handleRequestClick3}>
+            <div>
+              <img src={relate6} alt="" />
+              <div className="flex font-bold my-2 multiverse-text text-[12px] md:text-[11px]">
+                <p className="whitespace-nowrap">Performance Marketing</p>
+                <p className="mx-2">Social Media</p>
+                <p>Influencer Marketing</p>
+              </div>
+              <h1 className="font-bold text-xl md:text-xl multiverse-text text-left">
+                Active Club
+              </h1>
+            </div>
+          </button>
+          {isFormOpen3 && <ActiveClub onCancel={handleCancelClick3} />}
         </div>
       </div>
     </div>

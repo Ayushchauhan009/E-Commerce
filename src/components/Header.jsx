@@ -59,10 +59,10 @@ const Header = () => {
                   placeholder="Company URL*"
                   className="bg-[#e3e3e3] my-2 p-2 w-full placeholder-black outline-none"
                 />
+                <button className="bg-purple-500 rounded-full mt-3 text-white w-full py-2 font-bold ">
+                  Submit
+                </button>
               </form>
-              <button className="bg-purple-500 text-white w-full py-2 font-bold ">
-                Submit
-              </button>
             </div>
           </div>
           <p className="mt-10 lg:mt-2 text-lg md:text-xl font-semibold w-full ">
