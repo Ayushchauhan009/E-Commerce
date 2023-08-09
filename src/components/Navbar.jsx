@@ -216,7 +216,7 @@ const Navbar = () => {
                       className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
                     />
                   </form>
-                  <button className="bg-purple-500 text-white w-[72%] py-2 font-bold mx-14 mb-6">
+                  <button className="bg-purple-500 text-white w-[72%] rounded-full py-2 font-bold mx-14 mb-6">
                     Submit
                   </button>
                 </div>

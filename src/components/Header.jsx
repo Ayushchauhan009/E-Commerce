@@ -115,7 +115,7 @@ const Header = () => {
               <img
                 src={dataimg1}
                 alt=""
-                className="absolute ml-[0.2px] -mt-[0.6px] lg:-mt-0.5"
+                className="absolute ml-[0.2px] -mt-[0.6px] lg:-mt-0.5 w-[90%] lg:w-auto"
               />
               <div className="pr-3 lg:pr-4 py-6 pl-10 lg:pl-20">
                 <img src={data1} alt="" />
@@ -131,7 +131,7 @@ const Header = () => {
               <img
                 src={dataimg2}
                 alt=""
-                className="absolute ml-[0.3px] -mt-[0px] lg:-mt-0"
+                className="absolute ml-[0.3px] -mt-[0px] lg:-mt-0 w-[90%] lg:w-auto"
               />
               <div className="pr-3 lg:pr-4 py-6 pl-10 lg:pl-20">
                 <img src={data2} alt="" />
@@ -149,7 +149,7 @@ const Header = () => {
               <img
                 src={dataimg3}
                 alt=""
-                className="absolute ml-[0.2px] -mt-[0.6px] lg:-mt-0.5"
+                className="absolute ml-[0.2px] -mt-[0.6px] lg:-mt-0.5 w-[90%] lg:w-auto"
               />
               <div className="pr-3 lg:pr-4 py-6 pl-10 lg:pl-20">
                 <img src={data3} alt="" />
@@ -164,7 +164,7 @@ const Header = () => {
               <img
                 src={dataimg4}
                 alt=""
-                className="absolute ml-[0.2px] -mt-[0.6px] lg:-mt-0.5"
+                className="absolute ml-[0.2px] -mt-[0.6px] lg:-mt-0.5 w-[90%] lg:w-auto"
               />
               <div className="pr-3 lg:pr-4 py-6 pl-10 lg:pl-20">
                 <img src={data4} alt="" />
