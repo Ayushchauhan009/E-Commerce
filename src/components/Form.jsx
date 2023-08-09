@@ -1,30 +1,35 @@
-import React, {useRef} from "react";
+import React, { useRef } from "react";
 import emailjs from "emailjs-com";
 
 const Form = () => {
-    const formRef = useRef(null);
-    const handleFormSubmit = (e) => {
-      e.preventDefault();
-  
-      const serviceId = "service_gmail";
-      const templateId = "template_email";
-      const userId = "r8FD8zGLGFkGXKFNu";
-  
-      emailjs
-        .sendForm(serviceId, templateId, e.target, userId)
-        .then((response) => {
-          console.log("Email sent successfully:", response);
-          if (formRef.current) {
-            formRef.current.reset();
-          }
-        })
-        .catch((error) => {
-          console.error("Error sending email:", error);
-        });
-    };
+  const formRef = useRef(null);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_melangedigital";
+    const templateId = "template_886jjqm";
+    const userId = "11W3shu7B6S46t437";
+
+    emailjs
+      .sendForm(serviceId, templateId, e.target, userId)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        window.location.href = "/thankyou";
+        if (formRef.current) {
+          formRef.current.reset();
+        }
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
   return (
     <div className="pl-6 pr-6 lg:py-7 lg:shadow-2xl">
-      <form ref={formRef} className="lg:my-6 lg:px-14" onSubmit={handleFormSubmit}>
+      <form
+        ref={formRef}
+        className="lg:my-6 lg:px-14"
+        onSubmit={handleFormSubmit}
+      >
         <input
           type="text"
           required

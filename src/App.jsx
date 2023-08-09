@@ -1,34 +1,16 @@
 import React from "react";
-import {
-  Navbar,
-  Header,
-  Request,
-  Partners,
-  ImageScroller,
-  Approach,
-  Sellers,
-  CaseStudies,
-  Technologies,
-  Testimonials,
-  Contact,
-  Footer,
-} from "./components";
+import { Home, Thankyou } from "./pages";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Navbar />
-      <Header />
-      <Request />
-      <Partners />
-      <ImageScroller />
-      <Approach />
-      <Sellers />
-      <CaseStudies />
-      <Technologies />
-      <Testimonials />
-      <Contact />
-      <Footer />
+      <Router>
+        <Routes>
+          <Route exact path="/" Component={Home} />
+          <Route path="/thankyou" Component={Thankyou} />
+        </Routes>
+      </Router>
     </div>
   );
 }

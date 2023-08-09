@@ -3,11 +3,11 @@ import React from "react";
 const Approach = () => {
   return (
     <div className=" px-6 md:px-16 pb-10 lg:px-28 font-nunito">
-      <h2 className="mt-20 text-3xl font-bold">Our Approach</h2>
+      <h2 className="mt-24 text-3xl font-bold ">Our Approach</h2>
       <div className="my-10 w-full h-0.5 bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600"></div>
       <div className="flex flex-col md:flex-row justify-start">
         <p className="font-bold text-lg md:text-xl">01</p>
-        <h2 className="font-bold text-lg multiverse-text md:text-xl my-2 md:my-0 pl-0 md:pl-8 lg:pl-24 pr-0 md:pr-12 lg:pr-60">
+        <h2 className="font-bold text-[18px] multiverse-text md:text-[21px] lg:whitespace-nowrap my-2 md:my-0 pl-0 md:pl-8 lg:pl-24 pr-0 md:pr-12 lg:pr-60">
           Market Segmentation
         </h2>
         <div className="w-full md:w-[50%]">
@@ -21,7 +21,7 @@ const Approach = () => {
       <div className="my-10 w-full h-0.5 bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600"></div>
       <div className="flex flex-col md:flex-row justify-start">
         <p className="text-lg font-bold">02</p>
-        <h2 className="text-lg font-bold multiverse-text my-2 md:my-0 pl-0 md:pl-8  lg:pl-24 pr-0 md:pr-28 lg:pr-44">
+        <h2 className="text-[21px] font-bold multiverse-text my-2 md:my-0 pl-0 md:pl-8 lg:whitespace-nowrap lg:pl-24 pr-0 md:pr-28 lg:pr-36">
           Effective Branding & Messaging
         </h2>
         <div className="w-full lg:w-[50%]">
@@ -35,7 +35,7 @@ const Approach = () => {
       <div className="my-10 w-full h-0.5 bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600"></div>
       <div className="flex flex-col md:flex-row justify-start">
         <p className="font-bold text-lg md:text-xl">03</p>
-        <h2 className="font-bold text-lg multiverse-text md:text-xl my-2 md:my-0 pl-0 md:pl-8 lg:pl-24 lg:whitespace-nowrap md:pr-24 lg:pr-40">
+        <h2 className="font-bold text-[18px] multiverse-text md:text-[21px] my-2 md:my-0 pl-0 md:pl-8 lg:pl-24 lg:whitespace-nowrap md:pr-24 lg:pr-[155px]">
           Personalized User Experiences
         </h2>
         <div className="w-full lg:w-[50%]">
@@ -49,7 +49,7 @@ const Approach = () => {
       <div className="my-10 w-full h-0.5 bg-gradient-to-r from-purple-400 via-blue-500 to-purple-600"></div>
       <div className="flex flex-col md:flex-row justify-start">
         <p className="font-bold text-lg md:text-xl">04</p>
-        <h2 className="font-bold text-lg md:text-xl multiverse-text my-2 md:my-0 lg:whitespace-nowrap pl-0 md:pl-8 lg:pl-24 md:pr-[7.5rem] lg:pr-52">
+        <h2 className="font-bold text-lg md:text-[21px] multiverse-text my-2 md:my-0 lg:whitespace-nowrap pl-0 md:pl-8 lg:pl-24 md:pr-[7.5rem] lg:pr-52">
           Assessment & Evaluation
         </h2>
         <div className="w-full lg:w-[50%]">

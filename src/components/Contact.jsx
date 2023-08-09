@@ -6,12 +6,19 @@ const Contact = () => {
   return (
     <div className="py-8 my-4 lg:my-20 wrap md:py-32 px-3 md:px-16 lg:px-28 lg:py-8 sm:py-16 flex flex-col md:flex-row justify-between items-center font-nunito">
       <div className="md:w-1/2 lg:w-1/2 xl:w-1/2 mb-8 md:mb-0">
-        <h2 className="text-2xl md:text-3xl hidden lg:block lg:text-[38px] font-semibold w-auto ">
-          Let's connect <br /> to build something <br /> memorable for your{" "}
-          <span className="multiverse-text font-bold text-2xl md:text-4xl">
+        <p className="text-2xl md:text-3xl mb-3 hidden lg:block lg:text-[38px] font-semibold w-auto ">
+          Let's Connect
+        </p>
+        <p className="text-2xl md:text-3xl leading-3 mb-3 hidden lg:block lg:text-[38px] font-semibold w-auto ">
+          to build something
+        </p>
+        <p className="text-2xl md:text-3xl leading-3 hidden lg:block lg:text-[38px] font-semibold w-auto ">
+          memorable for your{" "}
+          <span className="multiverse-text font-bold  text-2xl md:text-4xl">
             Brand!
           </span>
-        </h2>
+        </p>
+
         <h2 className="text-2xl md:text-3xl block lg:hidden  lg:text-[38px] font-semibold w-auto ">
           Let's connect to build something <br /> memorable for your{" "}
           <span className="multiverse-text font-bold text-2xl md:text-4xl">

@@ -17,14 +17,15 @@ const Request = () => {
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
-    const serviceId = "service_gmail";
-    const templateId = "template_email";
-    const userId = "r8FD8zGLGFkGXKFNu";
+    const serviceId = "service_melangedigital";
+    const templateId = "template_886jjqm";
+    const userId = "11W3shu7B6S46t437";
 
     emailjs
       .sendForm(serviceId, templateId, e.target, userId)
       .then((response) => {
         console.log("Email sent successfully:", response);
+        window.location.href = "/thankyou";
         if (formRef.current) {
           formRef.current.reset();
         }
@@ -40,7 +41,7 @@ const Request = () => {
         Ready to scale your e-commerce sales to the next level?
       </h2>
       <button
-        className="bg-purple-500 p-3 font-semibold mt-3 lg:mt-0 text-[16px] lg:text-[20px] text-white hover:shadow-2xl hover:scale-110 transition-all rounded-full"
+        className="bg-purple-500 p-3 font-semibold mt-5 lg:mt-0 text-[16px] lg:text-[20px] text-white hover:shadow-2xl hover:scale-110 transition-all rounded-full"
         onClick={handleRequestClick}
       >
         Request an E-commerce Strategy

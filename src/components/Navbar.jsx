@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { logo, cancel } from "../assets/images";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
-// import { div, Link } from "react-router-dom";
+import emailjs from "emailjs-com";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -17,6 +18,27 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setMenuOpen(!isMenuOpen);
+  };
+  const formRef = useRef(null);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_melangedigital";
+    const templateId = "template_886jjqm";
+    const userId = "11W3shu7B6S46t437";
+
+    emailjs
+      .sendForm(serviceId, templateId, e.target, userId)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        window.location.href = "/thankyou";
+        if (formRef.current) {
+          formRef.current.reset();
+        }
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
   };
 
   return (
@@ -57,29 +79,40 @@ const Navbar = () => {
           }`}
         >
           <div className="navbar-link cursor-pointer">
-            <div activeClassName="active-link" exact className="nav-link">
-              Solutions
-            </div>
-          </div>
-          <div className="navbar-link cursor-pointer">
-            <div
-              //   to="/work"
+            <Link
               activeClassName="active-link"
               exact
               className="nav-link"
+              to="/#solutions"
+              smooth={true}
+              duration={500}
             >
-              Our Approach
-            </div>
+              Solutions
+            </Link>
           </div>
           <div className="navbar-link cursor-pointer">
-            <div
-              //   to="/about"
+            <Link
+              to="/#ourapproach"
+              activeClassName="active-link"
+              exact
+              className="nav-link"
+              smooth={true}
+              duration={500}
+            >
+              Our Approach
+            </Link>
+          </div>
+          <div className="navbar-link cursor-pointer">
+            <Link
+              smooth={true}
+              duration={500}
+              to="/#casestudies"
               activeClassName="active-link"
               exact
               className="nav-link"
             >
               Case Studies
-            </div>
+            </Link>
           </div>
           <div className="navbar-contact shadow-lg rounded-2xl cursor-pointer bg-[#1A1A1A] font-medium text-[17px] text-[#fff] hidden sm:block">
             <button
@@ -90,50 +123,6 @@ const Navbar = () => {
             >
               Contact Us
             </button>
-            {isFormOpen && (
-              <div className="pl-1 pr-1 py-7 bg-white z-10 shadow-2xl border rounded-[20px] fixed top-[16%] left-[35%]">
-                <button
-                  className=" text-white ml-[20rem] rounded-full  font-bold "
-                  type="button"
-                  onClick={handleCancelClick}
-                >
-                  <img src={cancel} alt="" />
-                </button>
-                <h2 className="font-semibold text-[24px] px-14 py-2 multiverse-text">
-                  Get In Touch
-                </h2>
-                <form className=" flex flex-col px-36 mb-3">
-                  <input
-                    type="text"
-                    placeholder="Full Name*"
-                    className="bg-[#e3e3e3] my-2 p-2 w-[242%] -ml-[5.5rem] placeholder-black outline-none"
-                  />
-                  <input
-                    type="tel"
-                    placeholder="Phone no*"
-                    className="bg-[#e3e3e3] my-2 p-2 w-[242%] -ml-[5.5rem] placeholder-black outline-none"
-                  />
-                  <input
-                    type="email"
-                    placeholder="Email id*"
-                    className="bg-[#e3e3e3] my-2 p-2 w-[242%] -ml-[5.5rem] placeholder-black outline-none"
-                  />
-                  <input
-                    type="text"
-                    placeholder="Company Name*"
-                    className="bg-[#e3e3e3] my-2 p-2 w-[242%] -ml-[5.5rem] placeholder-black outline-none"
-                  />
-                  <input
-                    type="url"
-                    placeholder="Company URL*"
-                    className="bg-[#e3e3e3] my-2 p-2 w-[242%] -ml-[5.5rem] placeholder-black outline-none"
-                  />
-                </form>
-                <button className="bg-purple-500 text-white w-[72%] py-2 font-bold mx-14 mb-6">
-                  Submit
-                </button>
-              </div>
-            )}
           </div>
         </div>
       </div>
@@ -142,7 +131,9 @@ const Navbar = () => {
           <div className="bg-[submit-bg] flex flex-col items-start pt-6 pl-4 hover:multiverse-text pb-20 justify-between h-[40%] font-medium">
             <div className="navbar-link cursor-pointer ">
               <div
-                // to="/services"
+                smooth={true}
+                duration={500}
+                to="/#solutions"
                 activeClassName="active-link"
                 exact
                 className="nav-link text-[25px] py-4 "
@@ -152,7 +143,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-link cursor-pointer">
               <div
-                // to="/work"
+                smooth={true}
+                duration={500}
+                to="#ourapproach"
                 activeClassName="active-link"
                 exact
                 className="nav-link text-[25px] "
@@ -162,7 +155,9 @@ const Navbar = () => {
             </div>
             <div className="navbar-link cursor-pointer">
               <div
-                // to="/about"
+                smooth={true}
+                duration={500}
+                to="/#casestudies"
                 activeClassName="active-link"
                 exact
                 className="nav-link text-[25px] py-4"
@@ -180,49 +175,66 @@ const Navbar = () => {
               >
                 Contact Us
               </button>
-              {isFormOpen && (
-                <div className="pl-1 pr-1 py-7 bg-white z-10 shadow-2xl border rounded-[20px] fixed top-[20%] left-[35%]">
-                  <button
-                    className=" text-white ml-[18.2rem] rounded-full  font-bold mx-14"
-                    type="button"
-                    onClick={handleCancelClick}
-                  >
-                    <img src={cancel} alt="" />
-                  </button>
-                  <form className=" flex flex-col px-32 mb-3">
-                    <input
-                      type="text"
-                      placeholder="Full Name*"
-                      className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
-                    />
-                    <input
-                      type="tel"
-                      placeholder="Phone no*"
-                      className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
-                    />
-                    <input
-                      type="email"
-                      placeholder="Email id*"
-                      className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
-                    />
-                    <input
-                      type="text"
-                      placeholder="Company Name*"
-                      className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
-                    />
-                    <input
-                      type="url"
-                      placeholder="Company URL*"
-                      className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
-                    />
-                  </form>
-                  <button className="bg-purple-500 text-white w-[72%] rounded-full py-2 font-bold mx-14 mb-6">
-                    Submit
-                  </button>
-                </div>
-              )}
             </div>
           </div>
+        </div>
+      )}
+      {isFormOpen && (
+        <div className="pl-1 pr-1 py-7 bg-white z-10 shadow-2xl border rounded-[20px] fixed top-[20%] lg:left-[35%]">
+          <button
+            className=" text-white ml-[18.2rem] w-10 h-10 rounded-full  font-bold mx-14"
+            type="button"
+            onClick={handleCancelClick}
+          >
+            <img src={cancel} alt="" />
+          </button>
+          <form
+            ref={formRef}
+            className=" flex flex-col px-32 mb-3"
+            onSubmit={handleFormSubmit}
+          >
+            <input
+              type="text"
+              placeholder="Full Name*"
+              required
+              name="full_name"
+              className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
+            />
+            <input
+              type="tel"
+              required
+              placeholder="Phone no*"
+              name="phone"
+              className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
+            />
+            <input
+              required
+              type="email"
+              name="email"
+              placeholder="Email id*"
+              className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
+            />
+            <input
+              required
+              type="text"
+              name="company_name"
+              placeholder="Company Name*"
+              className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
+            />
+            <input
+              required
+              type="url"
+              name="company_url"
+              placeholder="Company URL*"
+              className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
+            />
+            <button
+              className="bg-purple-500 text-white -ml-[4.5rem] w-[220%] rounded-full py-2 font-bold  mb-6"
+              type="submit"
+            >
+              Submit
+            </button>
+          </form>
         </div>
       )}
     </div>

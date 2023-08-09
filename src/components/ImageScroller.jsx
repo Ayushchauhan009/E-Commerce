@@ -19,8 +19,8 @@ const images = [
 
 function ImageScroller() {
   return (
-    <div className="wrapper">
-      <h2 className="text-[24px] lg:text-[32px] font-semibold my-10">
+    <div className="wrapper pb-6">
+      <h2 className="text-[24px] lg:text-[32px] font-semibold my-10  ">
         Brands We Have Helped To Grow
       </h2>
       <div className="marquee">

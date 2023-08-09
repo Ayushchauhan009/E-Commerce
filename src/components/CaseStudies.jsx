@@ -29,7 +29,7 @@ const CaseStudies = () => {
     setIsFormOpen3(false);
   };
   return (
-    <div className="font-nunito px-6 lg:px-28">
+    <div id="casestudies" className="font-nunito px-6 lg:px-28">
       <h2 className="mt-20 text-2xl md:text-3xl font-bold">
         E-commerce Management Case Studies
       </h2>

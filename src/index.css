@@ -77,7 +77,7 @@
   background: linear-gradient(to right, rgba(56, 88, 255, 0.2), rgba(183, 69, 255, 0.2), rgba(217, 64, 255, 0.2));
   display: flex;
   align-items: center;
-  margin: 30px 0;
+  margin: 30px 0 50px 0;
   justify-content: center;
   /* border: 1px solid red; */
   flex-direction: column;
@@ -178,7 +178,7 @@
   white-space: nowrap;
   width: max-content;
   justify-content: space-around;
-  animation: scrollX 20s linear infinite;
+  animation: scrollX 30s linear infinite;
 
 }
 .marqueeGroup3{
@@ -257,7 +257,7 @@
 
 .imaGe3 {
   object-fit: contain;
-  width: 100px; /* Adjust the image width as desired */
+  width: 120px; /* Adjust the image width as desired */
   height: 130px; /* Adjust the image height as desired */
   border-radius: 0.5rem;
   aspect-ratio: 4/4;
