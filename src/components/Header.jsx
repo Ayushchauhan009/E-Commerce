@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import emailjs from "emailjs-com";
 import {
   image1,
   data1,
@@ -12,6 +13,26 @@ import {
 } from "../assets/images";
 
 const Header = () => {
+  const formRef = useRef(null);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_gmail";
+    const templateId = "template_email";
+    const userId = "r8FD8zGLGFkGXKFNu";
+
+    emailjs
+      .sendForm(serviceId, templateId, e.target, userId)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        if (formRef.current) {
+          formRef.current.reset();
+        }
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
+  };
   return (
     <div>
       <div className="pt-28 md:pt-32 px-6 md:px-16 lg:px-28 font-nunito transition-scrolling">
@@ -33,36 +54,49 @@ const Header = () => {
                 Let Our Marketplace Expert Get your Product on Top of Searches
                 of Ecommerce
               </p>
-              <form className="my-6">
+              <form ref={formRef} className="my-6" onSubmit={handleFormSubmit}>
                 <input
                   type="text"
+                  name="full_name"
                   placeholder="Full Name*"
+                  required
                   className="bg-[#e3e3e3] my-2 p-2 w-full placeholder-black outline-none"
                 />
                 <input
                   type="tel"
                   placeholder="Phone no*"
+                  required
+                  name="phone"
                   className="bg-[#e3e3e3] my-2 p-2 w-full placeholder-black outline-none"
                 />
                 <input
                   type="email"
                   placeholder="Email id*"
+                  required
+                  name="email"
                   className="bg-[#e3e3e3] my-2 p-2 w-full placeholder-black outline-none"
                 />
                 <input
                   type="text"
                   placeholder="Company Name*"
+                  required
+                  name="company_name"
                   className="bg-[#e3e3e3] my-2 p-2 w-full placeholder-black outline-none"
                 />
                 <input
                   type="url"
+                  required
+                  name="company_url"
                   placeholder="Company URL*"
                   className="bg-[#e3e3e3] my-2 p-2 w-full placeholder-black outline-none"
                 />
+                <button
+                  className="bg-purple-500 rounded-full text-white w-full py-2 font-bold "
+                  type="submit"
+                >
+                  Submit
+                </button>
               </form>
-              <button className="bg-purple-500 rounded-full  text-white w-full py-2 font-bold ">
-                Submit
-              </button>
             </div>
           </div>
           <p className="mt-10 lg:mt-2 text-lg md:text-xl font-semibold w-full ">

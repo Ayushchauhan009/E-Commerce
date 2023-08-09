@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import { cancel } from "../assets/images";
 
 const Request = () => {
@@ -10,6 +11,27 @@ const Request = () => {
 
   const handleCancelClick = () => {
     setIsFormOpen(false);
+  };
+
+  const formRef = useRef(null);
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+
+    const serviceId = "service_gmail";
+    const templateId = "template_email";
+    const userId = "r8FD8zGLGFkGXKFNu";
+
+    emailjs
+      .sendForm(serviceId, templateId, e.target, userId)
+      .then((response) => {
+        console.log("Email sent successfully:", response);
+        if (formRef.current) {
+          formRef.current.reset();
+        }
+      })
+      .catch((error) => {
+        console.error("Error sending email:", error);
+      });
   };
 
   return (
@@ -25,9 +47,9 @@ const Request = () => {
       </button>
 
       {isFormOpen && (
-        <div className="pl-1 pr-1 py-7 bg-white z-10 shadow-2xl border rounded-[20px] fixed top-[20%] left-[35%]">
+        <div className="pl-1 pr-1 py-7 bg-white z-10 shadow-2xl border rounded-[20px] fixed top-[20%] lg:left-[35%]">
           <button
-            className=" text-white ml-[18.2rem] rounded-full  font-bold mx-14"
+            className=" text-white ml-[18.2rem] rounded-full  font-bold w-10"
             type="button"
             onClick={handleCancelClick}
           >
@@ -36,36 +58,48 @@ const Request = () => {
           <h2 className="font-semibold text-[24px] px-14 py-2 multiverse-text">
             Get In Touch
           </h2>
-          <form className=" flex flex-col px-32 mb-3">
+          <form
+            ref={formRef}
+            className=" flex flex-col px-32 mb-3"
+            onSubmit={handleFormSubmit}
+          >
             <input
               type="text"
+              name="full_name"
               placeholder="Full Name*"
               className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
             />
             <input
               type="tel"
+              name="phone"
               placeholder="Phone no*"
               className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
             />
             <input
               type="email"
+              name="email"
               placeholder="Email id*"
               className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
             />
             <input
+              name="company_name"
               type="text"
               placeholder="Company Name*"
               className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
             />
             <input
               type="url"
+              name="company_url"
               placeholder="Company URL*"
               className="bg-[#e3e3e3] my-2 p-2 w-[220%] -ml-[4.5rem] placeholder-black outline-none"
             />
+            <button
+              className="bg-purple-500 text-white w-[220%] -ml-[4.5rem] rounded-full py-2 mt-2 font-bold "
+              type="submit"
+            >
+              Submit
+            </button>
           </form>
-          <button className="bg-purple-500 text-white w-[72%] py-2 font-bold mx-14 mb-6">
-            Submit
-          </button>
         </div>
       )}
     </div>

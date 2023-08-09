@@ -9,6 +9,7 @@ import item7 from "../assets/images/item7.png";
 import item8 from "../assets/images/item8.png";
 import item9 from "../assets/images/item9.png";
 import item10 from "../assets/images/item10.png";
+import item11 from "../assets/images/interakt.png";
 
 const images = [
   item1,
@@ -19,6 +20,7 @@ const images = [
   item6,
   item7,
   item8,
+  item11,
   item9,
   item10,
 ];
@@ -26,11 +28,11 @@ const images = [
 function Technologies() {
   return (
     <div className="wrapper">
-      <div className="flex flex-col lg:flex-row px-4 lg:px-28 lg:items-center font-nunito">
+      <div className="flex flex-col lg:flex-row px-4 lg:px-28 lg:items-start font-nunito">
         <h2 className="text-[20px] lg:text-[35px] font-semibold my-10">
           Say Yes To Technology With Mèlange!
         </h2>
-        <p className="w-auto lg:w-[60%] hidden lg:block">
+        <p className="w-auto lg:w-[60%] my-12 hidden lg:block">
           We utilize technology as a powerful tool to deliver customer-centric
           experiences, combining it with a data-driven approach, while
           constantly staying updated with the latest trends.
@@ -40,14 +42,14 @@ function Technologies() {
         <div className="marqueeGroup3">
           {images.map((el, index) => (
             <div key={index} className="imageGroup3">
-              <img src={el} className="imaGe3" />
+              <img src={el} className="imaGe3 largerImage" />
             </div>
           ))}
         </div>
         <div className="marqueeGroup3">
           {images.map((el, index) => (
             <div key={index} className="imageGroup3">
-              <img src={el} className="imaGe3" />
+              <img src={el} className="imaGe3 largerImage" />
             </div>
           ))}
         </div>
